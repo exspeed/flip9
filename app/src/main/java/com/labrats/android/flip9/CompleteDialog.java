@@ -68,7 +68,7 @@ public class CompleteDialog extends DialogFragment {
 
 				getTargetFragment().onActivityResult(getTargetRequestCode(),
 						Activity.RESULT_OK, i);
-			}
+        }
 		});
 		//Listener for "Retry" button
 		builder.setNegativeButton("Retry", new OnClickListener() {

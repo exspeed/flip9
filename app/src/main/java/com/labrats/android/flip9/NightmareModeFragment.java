@@ -5,6 +5,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -39,6 +40,7 @@ public class NightmareModeFragment extends Fragment {
     private Animation mVerticalOut;
     private Random rand;
     private int answer;
+    private static final int REQUEST_COMPLETION = 0;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -160,7 +162,12 @@ public class NightmareModeFragment extends Fragment {
             mScore++;
             mCurrentScore.setText(mCurrentString + mScore);
             initialize();
-           }
+           }else{
+            FragmentManager fm = getActivity().getSupportFragmentManager();
+            NightmareDialog dialog =  NightmareDialog.newInstance(mScore);
+            dialog.setTargetFragment(this, REQUEST_COMPLETION);
+            dialog.show(fm,"yes");
+        }
        updateChange();
     }
 
