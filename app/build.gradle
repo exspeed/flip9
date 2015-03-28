@@ -18,7 +18,15 @@ android {
     }
 }
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.android.support:support-v4:21.0.3'
+}
+
+dependencies {
+    compile 'com.facebook.android:facebook-android-sdk:4.0.0'
 }

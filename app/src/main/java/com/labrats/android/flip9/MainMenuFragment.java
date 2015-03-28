@@ -7,12 +7,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import com.facebook.FacebookSdk;
 
 public class MainMenuFragment extends Fragment {
 	//Initializing variables
@@ -24,6 +23,8 @@ public class MainMenuFragment extends Fragment {
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+        FacebookSdk.sdkInitialize(getActivity().getApplicationContext());
+
 		View v = inflater
 				.inflate(R.layout.activity_main_menu, container, false);
 		//Listener for Classic mode

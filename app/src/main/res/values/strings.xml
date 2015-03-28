@@ -14,6 +14,8 @@
     <string name="time">Time Trial</string>
     <string name="nightmare">Nightmare</string>
     <string name="setting">Settings</string>
+    <string name="facebook_app_id">435815696584914</string>
     <string name="title_activity_time_trial">TimeTrialActivity</string>
+
 
 </resources>
