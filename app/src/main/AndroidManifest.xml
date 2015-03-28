@@ -39,6 +39,11 @@
             android:name=".TimeTrialActivity"
             android:label="@string/title_activity_time_trial" >
         </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".NightmareModeActivity"
+            android:label="@string/nightmare" >
+        </activity>
     </application>
 
 </manifest>

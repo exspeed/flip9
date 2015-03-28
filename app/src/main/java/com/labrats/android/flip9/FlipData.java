@@ -68,8 +68,8 @@ public class FlipData {
 		return mId;
 	}
 
-	public int getStart() {
-		return mStart;
+	public void setStart(int newState) {
+                mStart = newState;
 	}
 
 	public int getBestScore() {
@@ -109,14 +109,22 @@ public class FlipData {
 		mCurrentState = getBitmask(index) ^ mCurrentState;
 	}
 
+    public void flipOneTile(int index){
+        int i = 1;
+        i <<= index;
+        mCurrentState = mCurrentState ^ i;
+    }
+
 	public void restart() {
 		mCurrentState = mStart;
 	}
 
+    // num [0-9)
 	public static int getBitmask(int num) {
 		if (num >= 0 && num < masks.length)
 			return masks[num];
 		return 0;
 	}
+
 
 }

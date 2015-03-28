@@ -54,8 +54,8 @@ public class MainMenuFragment extends Fragment {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Log.e("Hi", "Nightmare Menu");
-				
+				Intent i = new Intent(getActivity(), NightmareModeActivity.class);
+				startActivity(i);
 			}
 		});
 		//Listener for settings 
