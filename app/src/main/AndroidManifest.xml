@@ -35,14 +35,14 @@
             android:theme="@android:style/Theme.Holo.Light" >
         </activity>
         <activity
-            android:screenOrientation="portrait"
             android:name=".TimeTrialActivity"
-            android:label="@string/title_activity_time_trial" >
+            android:label="@string/title_activity_time_trial"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:screenOrientation="portrait"
             android:name=".NightmareModeActivity"
-            android:label="@string/nightmare" >
+            android:label="@string/nightmare"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 
