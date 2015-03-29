@@ -49,7 +49,7 @@ public class PuzzleListFragment extends ListFragment {
 		case R.id.action_settings:
 			FragmentManager fm = getActivity().getSupportFragmentManager();
 			ColorSelectDialog dialog = new ColorSelectDialog();
-			dialog.show(fm, "Choose Color");
+			dialog.show(fm, "Choose color ");
 			
 		}
 		return true;

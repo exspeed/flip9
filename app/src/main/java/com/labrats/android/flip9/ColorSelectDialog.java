@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
@@ -28,10 +29,11 @@ public class ColorSelectDialog extends DialogFragment {
 
 		colorButtons[data.getColorIndex()].setImageResource(R.drawable.check);
 
-		builder.setTitle("Color");
+        Resources res = getResources();
+		builder.setTitle(res.getString(R.string.color));
 		builder.setView(v);
 
-		builder.setPositiveButton("OK", new OnClickListener() {
+		builder.setPositiveButton(R.string.ok, new OnClickListener() {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Retourner 9</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="moves">Moves\n</string>
+    <string name="restart">Redémarrage</string>
+    <string name="undo">Annuler</string>
+    <string name="cheat">Tricher</string>
+    <string name="record">Record</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="hello_world">Bonjour le monde!</string>
+    <string name="classic">Classique</string>
+    <string name="time">Contre la Montre</string>
+    <string name="nightmare">Cauchemar</string>
+    <string name="setting">Paramètres</string>
+    <string name="title_activity_time_trial">TimeTrialActivity</string>
+    <string name="next">Suivant</string>
+    <string name="retry">Refaire</string>
+    <string name="puzzle">Puzzle</string>
+    <string name="menu">Menu</string>
+    <string name="color">Couleur</string>
+    <string name ="ok">ok</string>
+
+
+    <string-array name="motivation">
+        <item>Continuez!!</item>
+        <item>Exceptionnel</item>
+        <item>Bon Travail</item>
+        <item>Way to go</item>
+        <item>à droite sur</item>
+        <item>Beau travail</item>
+        <item>Superbe</item>
+    </string-array>
+
+    <string-array name="demotivation">
+        <item>Vous Avez Perdu</item>
+        <item>MAL</item>
+        <item>Bel Essai</item>
+        <item>Vous Sucez</item>
+        <item>Incorrect</item>
+    </string-array>
+
+
+</resources>

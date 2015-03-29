@@ -8,6 +8,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
@@ -28,8 +29,7 @@ public class NightmareDialog extends DialogFragment {
     public static final String EXTRA_NEXT = "next";
     public static final String EXTRA_SCORE ="Score";
 
-    private static final String[] DEMOTIVATION = { "You Lost", "WRONG",
-             "Nice Try", "You Suck", "Incorrect" };
+
     private TextView mMotivationTextView;
 
     //Complete dialog when completing a puzzle
@@ -48,14 +48,16 @@ public class NightmareDialog extends DialogFragment {
 
         //Generate random motivation message
         Random rand = new Random();
-        int index = rand.nextInt(DEMOTIVATION.length);
+        Resources res = getResources();
+        String [] demotivation = res.getStringArray(R.array.demotivation);
+        int index = rand.nextInt(demotivation.length);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-        builder.setTitle(DEMOTIVATION[index]);
+        builder.setTitle(demotivation[index]);
         //Listener for "Retry" button
 
-        builder.setPositiveButton("Retry", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(res.getString(R.string.retry), new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -66,7 +68,7 @@ public class NightmareDialog extends DialogFragment {
         });
 
         //Listener for "Menu" button
-        builder.setNegativeButton("Menu", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(res.getString(R.string.menu), new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {

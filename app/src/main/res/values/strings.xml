@@ -17,6 +17,31 @@
     <string name="facebook_app_id">435815696584914</string>
     <string name="title_activity_time_trial">TimeTrialActivity</string>
     <string name="confirm">Confirm</string>
+    <string name="next">Next</string>
+    <string name="retry">Retry</string>
+    <string name="puzzle">Puzzle</string>
+    <string name ="color">Color</string>
+    <string name ="ok">OK</string>
+    <string name ="menu">Menu</string>
 
+
+
+    <string-array name="motivation">
+        <item>Keep it up!</item>
+        <item>Outstanding</item>
+        <item>Good job</item>
+        <item>Way to go</item>
+        <item>Right on</item>
+        <item>Nice work</item>
+        <item>Superb</item>
+    </string-array>
+
+    <string-array name="demotivation">
+        <item>You Lost</item>
+        <item>WRONG</item>
+        <item>Nice Try</item>
+        <item>You Suck</item>
+        <item>Incorrect</item>
+        </string-array>
 
 </resources>

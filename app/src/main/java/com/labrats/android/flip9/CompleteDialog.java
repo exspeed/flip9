@@ -8,6 +8,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
@@ -23,8 +24,7 @@ public class CompleteDialog extends DialogFragment {
 	public static final String EXTRA_NEXT = "next";
 	public static final String EXTRA_SCORE ="stars";
 
-	private static final String[] MOTIVATION = { "Keep it up!", "Outstanding",
-			"Good job", "Way to go", "Right on", "Nice work", "Superb" };
+
 	private TextView mMotivationTextView;
 	private RatingBar mRatingBar;
 
@@ -46,20 +46,25 @@ public class CompleteDialog extends DialogFragment {
 				R.layout.complete_fragment, null);
 		mMotivationTextView = (TextView) v.findViewById(R.id.congratsTextView);
 		//Generate random motivation message
-		Random rand = new Random();
-		int index = rand.nextInt(MOTIVATION.length);
-		mMotivationTextView.setText(MOTIVATION[index]);
+
+        Random rand = new Random();
+        Resources res = getResources();
+        String [] MOTIVATION = res.getStringArray(R.array.motivation);
+        int index = rand.nextInt(MOTIVATION.length);
+        mMotivationTextView.setText(MOTIVATION[index]);
 
 		mRatingBar = (RatingBar) v.findViewById(R.id.congratsRatingBar);
 		int score = getArguments().getInt(EXTRA_SCORE);
 		mRatingBar.setRating(getStars(score));
 
+        String next = res.getString(R.string.next);
+        String retry = res.getString(R.string.retry);
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
 		builder.setView(v);
 		//Listener for "Next" button
-		builder.setPositiveButton("Next", new OnClickListener() {
+		builder.setPositiveButton(next, new OnClickListener() {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
@@ -71,7 +76,7 @@ public class CompleteDialog extends DialogFragment {
         }
 		});
 		//Listener for "Retry" button
-		builder.setNegativeButton("Retry", new OnClickListener() {
+		builder.setNegativeButton(retry, new OnClickListener() {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {

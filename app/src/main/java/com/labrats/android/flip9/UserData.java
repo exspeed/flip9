@@ -42,9 +42,11 @@ public class UserData {
 
 		if (mLevelList.isEmpty()) { // check if empty
 			mLevelList = new ArrayList<FlipData>();
+            String puzzle = c.getResources().getString(R.string.puzzle);
 			for (int i = 1; i <= 30; i++) {
 				FlipData data = new FlipData(53 * i % 512);
-				data.setTitle("Puzzle " + i);
+
+				data.setTitle(puzzle+ " " + i);
 				mLevelList.add(data);
 
 			}

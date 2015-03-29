@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">フリップ 9</string>
+    <string name="action_settings">[設定]</string>
+    <string name="moves">移動\n</string>
+    <string name="restart">再起動</string>
+    <string name="undo">取り消す</string>
+    <string name="cheat">カンニング</string>
+    <string name="record">記録</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="hello_world">こんにちは世界!</string>
+    <string name="classic">クラシック</string>
+    <string name="time">時間e</string>
+    <string name="nightmare">悪夢</string>
+    <string name="setting">設定</string>
+    <string name="title_activity_time_trial">TimeTrialActivity</string>
+    <string name="next">次</string>
+    <string name="retry">再試行</string>
+    <string name="puzzle">パズル</string>
+    <string name="menu">メニュー</string>
+    <string name="color">色</string>
+    <string name ="ok">はい</string>
+
+
+    <string-array name="motivation">
+        <item>がんばり続ける!!</item>
+        <item>傑出した</item>
+        <item>よくやった</item>
+        <item>移動するための方法</item>
+        <item>右に</item>
+        <item>いい仕事</item>
+        <item>素晴らしい</item>
+    </string-array>
+
+    <string-array name="demotivation">
+        <item>あなたが失われた</item>
+        <item>間違った</item>
+        <item>惜しい</item>
+        <item>最悪だな</item>
+        <item>正しくない</item>
+    </string-array>
+
+
+</resources>
