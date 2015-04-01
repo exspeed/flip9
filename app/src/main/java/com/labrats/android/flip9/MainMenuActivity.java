@@ -1,10 +1,8 @@
 package com.labrats.android.flip9;
 
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import com.facebook.appevents.AppEventsLogger;
+
 
 public class MainMenuActivity extends SingleFragmentActivity {
 
@@ -13,6 +11,21 @@ public class MainMenuActivity extends SingleFragmentActivity {
 		
 		return new MainMenuFragment();
 	}
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Logs 'install' and 'app activate' App Events.
+        AppEventsLogger.activateApp(this);
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        // Logs 'app deactivate' App Event.
+        AppEventsLogger.deactivateApp(this);
+    }
 
 
 }

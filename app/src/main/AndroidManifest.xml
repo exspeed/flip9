@@ -10,12 +10,16 @@
         android:minSdkVersion="11"
         android:targetSdkVersion="21" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
+
+
         <activity
             android:name=".FlipNineActivity"
             android:label="@string/app_name"
@@ -51,7 +55,12 @@
             android:configChanges=
                 "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            />
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider435815696584914"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -21,6 +21,8 @@
     <string name="menu">メニュー</string>
     <string name="color">色</string>
     <string name ="ok">はい</string>
+    <string name="confirm">確認する</string>
+    <string name="facebook_app_id">435815696584914</string>
 
 
     <string-array name="motivation">

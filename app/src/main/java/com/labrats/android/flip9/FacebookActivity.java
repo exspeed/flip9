@@ -1,0 +1,16 @@
+package com.labrats.android.flip9;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+/**
+ * Created by Andrew on 2015-03-30.
+ */
+public class FacebookActivity extends Activity{
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+}

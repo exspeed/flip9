@@ -1,6 +1,7 @@
 package com.labrats.android.flip9;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 	
 import android.support.v4.app.Fragment;
@@ -12,6 +13,8 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import com.facebook.FacebookSdk;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareButton;
 
 public class MainMenuFragment extends Fragment {
 	//Initializing variables
@@ -19,6 +22,7 @@ public class MainMenuFragment extends Fragment {
 	private Button mTimeTrialButton;
 	private Button mNightmareButton;
 	private Button mSettingsButton;
+    private ShareButton mShareButton;
 	
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,8 +64,8 @@ public class MainMenuFragment extends Fragment {
 			}
 		});
 		//Listener for settings 
-		mTimeTrialButton = (Button) v.findViewById(R.id.Settings);
-		mTimeTrialButton.setOnClickListener(new OnClickListener() {
+	    mSettingsButton = (Button) v.findViewById(R.id.Settings);
+		mSettingsButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -72,6 +76,20 @@ public class MainMenuFragment extends Fragment {
 				dialog.show(fm, "Choose Color");
 			}
 		});
+
+        mShareButton = (ShareButton) v.findViewById(R.id.fb_share_button);
+        ShareLinkContent content = new ShareLinkContent.Builder()
+                .setContentUrl(Uri.parse("https://developers.facebook.com"))
+                .build();
+        mShareButton.setShareContent(content);
+
+        mShareButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
 		return v;
 
 	}

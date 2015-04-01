@@ -21,6 +21,8 @@
     <string name="menu">Menu</string>
     <string name="color">Couleur</string>
     <string name ="ok">ok</string>
+    <string name="facebook_app_id">435815696584914</string>
+    <string name="confirm">confrim</string>
 
 
     <string-array name="motivation">
