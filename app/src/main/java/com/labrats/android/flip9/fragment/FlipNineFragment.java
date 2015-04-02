@@ -280,7 +280,7 @@ public class FlipNineFragment extends Fragment {
 			mSoundEffect = null;
 		}
 	}
-
+    // update the color
 	private void updateChange() {
 
 		int temp = mFlipData.getCurrentState();
@@ -330,7 +330,7 @@ public class FlipNineFragment extends Fragment {
 
 		}
 	}
-
+    // check if the user wants to move to the next puzzle or restart
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (resultCode == Activity.RESULT_OK) {
@@ -405,6 +405,7 @@ public class FlipNineFragment extends Fragment {
 			return true;
 		}
 
+        // updates the board
 		private void highlightTile() {
 			int mask = FlipData.getBitmask(POSITION);
 			for (int i = 0; i < 9; i++) {
@@ -422,9 +423,7 @@ public class FlipNineFragment extends Fragment {
 			mSoundEffect.setOnCompletionListener(new OnCompletionListener() {
 				@Override
 				public void onCompletion(MediaPlayer mp) {
-					/*
-					  if(mp == mSoundEffect){ mSoundEffect.start(); }
-					 */
+
 
 					if (mSoundEffect != null) {
 						mSoundEffect.reset();

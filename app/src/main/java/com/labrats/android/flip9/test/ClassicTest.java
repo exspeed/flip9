@@ -8,6 +8,7 @@ import com.labrats.android.flip9.activity.MainMenuActivity;
 
 /**
  * Created by Andrew on 2015-04-01.
+ * incomplete not being used
  */
 public class ClassicTest extends ActivityInstrumentationTestCase2<MainMenuActivity>{
 

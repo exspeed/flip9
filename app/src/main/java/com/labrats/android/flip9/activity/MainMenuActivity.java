@@ -5,6 +5,7 @@ import com.facebook.appevents.AppEventsLogger;
 import com.labrats.android.flip9.fragment.MainMenuFragment;
 
 
+//activity for main menu
 public class MainMenuActivity extends SingleFragmentActivity {
 
 	@Override
@@ -12,21 +13,5 @@ public class MainMenuActivity extends SingleFragmentActivity {
 		
 		return new MainMenuFragment();
 	}
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        // Logs 'install' and 'app activate' App Events.
-        AppEventsLogger.activateApp(this);
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        // Logs 'app deactivate' App Event.
-        AppEventsLogger.deactivateApp(this);
-    }
-
 
 }

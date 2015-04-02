@@ -4,8 +4,8 @@ package com.labrats.android.flip9.activity;
 
         import com.labrats.android.flip9.fragment.TimeTrialFragment;
 
+// activity for the timeTrial
 public class TimeTrialActivity extends SingleFragmentActivity {
-
     @Override
     protected Fragment createFragment() {
         return new TimeTrialFragment();

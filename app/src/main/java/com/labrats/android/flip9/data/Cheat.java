@@ -4,6 +4,10 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/*
+    The Cheat Class is to find the shortest solution to
+    all puzzles in flip9
+ */
 public class Cheat {
 	//Initialize variables
 	private static final int[] masks = { 11, 23, 38, 89, 186, 308, 200, 464,
@@ -14,8 +18,9 @@ public class Cheat {
 	private static ArrayList<Integer> ans = new ArrayList<Integer>();
 
 
-	/**
-	 * returns the button presses
+	/*
+	  c = the state of the button represented in binary [0-512)
+      returns the solution in decreasing order.
 	 */
 	public static ArrayList<Integer> getCheat(int c) {
         if(c < 0 || c >= 512){
@@ -37,7 +42,7 @@ public class Cheat {
 		return ans;
 	}
 
-	//Breadth-first search
+	//Breadth-first search to find best soltuion
 	private static void bfs(int c) {
 		ArrayDeque<Integer> q = new ArrayDeque<Integer>(10);
 		visited[c] = true;

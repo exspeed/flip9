@@ -20,7 +20,9 @@ import com.labrats.android.flip9.R;
 import com.labrats.android.flip9.activity.NightmareModeActivity;
 import com.labrats.android.flip9.activity.PuzzleListActivity;
 import com.labrats.android.flip9.activity.TimeTrialActivity;
-
+/*
+    display dull menu with buttons
+ */
 public class MainMenuFragment extends Fragment {
 	//Initializing variables
 	private Button mClassicButton;
@@ -63,7 +65,6 @@ public class MainMenuFragment extends Fragment {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				Intent i = new Intent(getActivity(), NightmareModeActivity.class);
 				startActivity(i);
 			}
@@ -74,14 +75,14 @@ public class MainMenuFragment extends Fragment {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Log.e("Hi", "Settings Menu");
+				//Log.e("Hi", "Settings Menu");
 				FragmentManager fm = getActivity().getSupportFragmentManager();
 				ColorSelectDialog dialog = new ColorSelectDialog();
 				dialog.show(fm, "Choose Color");
 			}
 		});
 
+        // display facebook button
         mShareButton = (ShareButton) v.findViewById(R.id.fb_share_button);
         ShareLinkContent content = new ShareLinkContent.Builder()
                 .setContentUrl(Uri.parse("https://developers.facebook.com"))

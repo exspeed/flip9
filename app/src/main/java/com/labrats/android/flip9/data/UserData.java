@@ -43,7 +43,7 @@ public class UserData {
 				R.array.tilecolors);
 
 		if (mLevelList.isEmpty()) { // check if empty
-			mLevelList = new ArrayList<FlipData>();
+			mLevelList = new ArrayList<>();
             String puzzle = c.getResources().getString(R.string.puzzle);
 			for (int i = 1; i <= 30; i++) {
 				FlipData data = new FlipData(53 * i % 512);
@@ -141,7 +141,7 @@ public class UserData {
 			while ((line = reader.readLine()) != null) {
 				jsonString.append(line);
 			}
-			Toast.makeText(mContext, "load data", Toast.LENGTH_SHORT).show();
+			//Toast.makeText(mContext, "load data", Toast.LENGTH_SHORT).show();
 			JSONObject data = new JSONObject(jsonString.toString());
 			mCurrentLevel = data.getInt("nextlevel");
 			mColorIndex = data.getInt("color");

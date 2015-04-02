@@ -5,6 +5,10 @@ import java.util.UUID;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/*
+    purpose: FlipData represents the board game state and save unique
+    puzzle in classic mode.
+*/
 public class FlipData {
 	//Initialize variables
 	public static final String JSON_BESTSCORE = "best score";
@@ -76,22 +80,33 @@ public class FlipData {
 		return mBestScore;
 	}
 
-	public void setBestScore(int newScore) {
-		if (mBestScore == 0)
-			mBestScore = newScore;
+    public int getStars() {
+        return mStars;
+    }
 
-		if (mBestScore < newScore)
-			return;
+    public int getCurrentState() {
+        return mCurrentState;
+    }
 
-		mBestScore = newScore;
-		setStars();
+    // bring back to the beginning
+    public void restart() {
+        mCurrentState = mStart;
+    }
 
-	}
 
-	public int getStars() {
-		return mStars;
-	}
+    public void setBestScore(int newScore) {
+        if (mBestScore == 0)
+            mBestScore = newScore;
 
+        if (mBestScore < newScore)
+            return;
+
+        mBestScore = newScore;
+        setStars();
+
+    }
+
+    // evaluate result and set stars
 	private void setStars() {
 		if (mBestScore < 10)
 			mStars = 3;
@@ -101,10 +116,8 @@ public class FlipData {
 			mStars = 1;
 	}
 
-	public int getCurrentState() {
-		return mCurrentState;
-	}
 
+    // change tile state
 	public void flipTile(int index) {
 		mCurrentState = getBitmask(index) ^ mCurrentState;
 	}
@@ -115,9 +128,6 @@ public class FlipData {
         mCurrentState = mCurrentState ^ i;
     }
 
-	public void restart() {
-		mCurrentState = mStart;
-	}
 
     // num [0-9)
 	public static int getBitmask(int num) {

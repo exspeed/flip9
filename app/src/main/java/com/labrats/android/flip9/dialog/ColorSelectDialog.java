@@ -15,7 +15,9 @@ import android.widget.LinearLayout;
 
 import com.labrats.android.flip9.R;
 import com.labrats.android.flip9.data.UserData;
-
+/*
+    purpose: Display the color options the user would like.
+ */
 public class ColorSelectDialog extends DialogFragment {
 	//Initialize variables
 	ImageButton[] colorButtons = new ImageButton[8];
@@ -51,6 +53,7 @@ public class ColorSelectDialog extends DialogFragment {
 		return builder.create();
 	}
 
+    // set the color dynamically to the button
 	private void initializeColorButton(View v) {
 		LinearLayout rowOfButtons = (LinearLayout) v
 				.findViewById(R.id.color_row1);
@@ -80,6 +83,7 @@ public class ColorSelectDialog extends DialogFragment {
 		colors.recycle();
 	}
 
+    // show user's current selection
 	private class AddCheckListener implements View.OnClickListener {
 
 		int position;

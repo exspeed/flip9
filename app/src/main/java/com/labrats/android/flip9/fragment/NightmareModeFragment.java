@@ -88,8 +88,7 @@ public class NightmareModeFragment extends Fragment {
                 textW.setLayoutParams(layout);
                 textW.setTextColor(-1);
                 textW.setTextSize(16);
-                textW.setText("To play this game, tap on a tile. The one you tap and the adjacent ones will change colors. "
-                        + "The goal of the game is to make it all the same color");
+                textW.setText("You can flip one tile. Get to the final state when the red * are pressed");
                 infoPopUp.setContentView(textW);
                 infoPopUp.setWidth(800);
                 infoPopUp.setHeight(300);

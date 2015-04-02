@@ -24,10 +24,18 @@ import com.labrats.android.flip9.R;
 import com.labrats.android.flip9.data.UserData;
 import com.labrats.android.flip9.activity.FlipNineActivity;
 
+
+ /*
+ referenced:
+ Android Programming: The Big Nerd Ranch Guide
+ BILL PHILLIPS AND BRIAN HARDY
+ */
+
 public class PuzzleListFragment extends ListFragment {
 
 	private ArrayList<FlipData> mLevelList;
 
+    // initialize the list of puzzles
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -36,11 +44,11 @@ public class PuzzleListFragment extends ListFragment {
 		setListAdapter(new LevelAdapter(mLevelList));
 	}
 
-	@Override
+	/*@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		return super.onCreateView(inflater, container, savedInstanceState);
-	}
+	}*/
 	
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
@@ -49,6 +57,7 @@ public class PuzzleListFragment extends ListFragment {
 		super.onCreateOptionsMenu(menu, inflater);
 	}
 
+    // show color selection menu
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch(item.getItemId()){
@@ -60,6 +69,8 @@ public class PuzzleListFragment extends ListFragment {
 		}
 		return true;
 	}
+
+    // bring you to flip 9 classic mode game
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
 		FlipData level = (FlipData) getListAdapter().getItem(position);
@@ -71,6 +82,8 @@ public class PuzzleListFragment extends ListFragment {
 
 	}
 
+
+    // update the list and show it
 	@Override
 	public void onResume() {
 		super.onResume();
@@ -83,6 +96,7 @@ public class PuzzleListFragment extends ListFragment {
 			super(getActivity(), android.R.layout.simple_list_item_1, data);
 		}
 
+        // display view of a single puzzle
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			if (convertView == null) {

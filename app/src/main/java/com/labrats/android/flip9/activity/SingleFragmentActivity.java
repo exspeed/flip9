@@ -8,6 +8,9 @@ import android.support.v4.app.FragmentManager;
 
 import com.labrats.android.flip9.R;
 
+/* class that displays the fragments
+ This code was written by Android Programming: The Big Nerd Ranch Guide
+ BILL PHILLIPS AND BRIAN HARDY*/
 public abstract class SingleFragmentActivity extends FragmentActivity {
     protected abstract Fragment createFragment();
 

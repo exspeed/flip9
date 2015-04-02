@@ -47,6 +47,8 @@ public class TimeTrialFragment extends Fragment {
 	private Random rand;
 	private Timer countDown;
 
+
+    // show view of the board  + initialization
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState);
@@ -89,6 +91,7 @@ public class TimeTrialFragment extends Fragment {
 		mCurrentString = mCurrentScore.getText().toString() + "\n";
 		mCurrentScore.setText(mCurrentString + mScore);
 
+        // pop up dialog of how to pay
 		mInfoButton = (ImageButton) v.findViewById(R.id.infoButton);
 		mInfoButton.setOnClickListener(new OnClickListener() {
 
@@ -101,8 +104,7 @@ public class TimeTrialFragment extends Fragment {
 				textW.setLayoutParams(layout);
 				textW.setTextColor(-1);
 				textW.setTextSize(16);
-				textW.setText("To play this game, tap on a tile. The one you tap and the adjacent ones will change colors. "
-						+ "The goal of the game is to make it all the same color");
+				textW.setText("Solve as many puzzles in 1 minute!");
 				infoPopUp.setContentView(textW);
 				infoPopUp.setWidth(800);
 				infoPopUp.setHeight(300);
@@ -158,6 +160,7 @@ public class TimeTrialFragment extends Fragment {
 
 	int touchedTile = 0;
 
+    // flip animation  when clicked
 	private void startAnimation(int index, Animation anim) {
 		touchedTile = index;
 		int mask = FlipData.getBitmask(index);
@@ -167,7 +170,7 @@ public class TimeTrialFragment extends Fragment {
 		}
 
 	}
-
+    // reset time and puzzle
 	private void restart() {
 		mScore = 0;
 		mCurrentScore.setText(mCurrentString + mScore);
@@ -184,6 +187,7 @@ public class TimeTrialFragment extends Fragment {
 
 	}
 
+    // initialize all the attributes for time trial
 	private void initialize() {
 		// find FlipData that corresponds to the puzzle
 		rand = new Random();
@@ -196,6 +200,7 @@ public class TimeTrialFragment extends Fragment {
 		updateChange();
 	}
 
+     // remove sound from the pool
 	@Override
 	public void onPause() {
 		super.onPause();
@@ -204,7 +209,7 @@ public class TimeTrialFragment extends Fragment {
 			mSoundEffect = null;
 		}
 	}
-
+    // change color of the buttons
 	private void updateChange() {
 
 		int temp = mFlipData.getCurrentState();
@@ -227,6 +232,7 @@ public class TimeTrialFragment extends Fragment {
 		}
 	}
 
+    // give new puzzle if completed
 	private void checkCompleted() {
 		if (mFlipData.getCurrentState() == 0) {
 			mScore += 1;
@@ -291,6 +297,7 @@ public class TimeTrialFragment extends Fragment {
 			return true;
 		}
 
+        // update tile pressed
 		private void highlightTile() {
 			int mask = FlipData.getBitmask(POSITION);
 			for (int i = 0; i < 9; i++) {
@@ -300,6 +307,7 @@ public class TimeTrialFragment extends Fragment {
 			}
 		}
 
+        // play mouse sound
 		private void playSound() {
 			if (mSoundEffect == null) {
 				mSoundEffect = MediaPlayer.create(getActivity(), R.raw.mouse1);
@@ -307,9 +315,7 @@ public class TimeTrialFragment extends Fragment {
 			mSoundEffect.setOnCompletionListener(new OnCompletionListener() {
 				@Override
 				public void onCompletion(MediaPlayer mp) {
-					/*
-					 * if(mp == mSoundEffect){ mSoundEffect.start(); }
-					 */
+
 
 					if (mSoundEffect != null) {
 						mSoundEffect.reset();
