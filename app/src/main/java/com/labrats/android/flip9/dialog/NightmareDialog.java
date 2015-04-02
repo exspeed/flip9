@@ -1,25 +1,19 @@
-package com.labrats.android.flip9;
+package com.labrats.android.flip9.dialog;
 
 import java.util.Random;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.view.Gravity;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.AbsListView.SelectionBoundsAdjuster;
 
-import java.util.Random;
+import com.labrats.android.flip9.R;
+import com.labrats.android.flip9.activity.MainMenuActivity;
+import com.labrats.android.flip9.activity.NightmareModeActivity;
 
 /**
  * Created by Jackie on 3/28/2015.

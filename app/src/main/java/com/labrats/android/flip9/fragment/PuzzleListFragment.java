@@ -1,4 +1,4 @@
-package com.labrats.android.flip9;
+package com.labrats.android.flip9.fragment;
 
 import java.util.ArrayList;
 
@@ -17,6 +17,12 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+
+import com.labrats.android.flip9.dialog.ColorSelectDialog;
+import com.labrats.android.flip9.data.FlipData;
+import com.labrats.android.flip9.R;
+import com.labrats.android.flip9.data.UserData;
+import com.labrats.android.flip9.activity.FlipNineActivity;
 
 public class PuzzleListFragment extends ListFragment {
 

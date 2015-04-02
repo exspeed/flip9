@@ -1,4 +1,4 @@
-package com.labrats.android.flip9;
+package com.labrats.android.flip9.data;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -18,6 +18,8 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.labrats.android.flip9.R;
 
 public class UserData {
 	//Initialize variables 

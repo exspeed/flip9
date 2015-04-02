@@ -1,4 +1,4 @@
-package com.labrats.android.flip9;
+package com.labrats.android.flip9.dialog;
 
 import java.util.Random;
 
@@ -11,13 +11,11 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.AbsListView.SelectionBoundsAdjuster;
+
+import com.labrats.android.flip9.R;
 
 public class CompleteDialog extends DialogFragment {
 	//Initialize variables

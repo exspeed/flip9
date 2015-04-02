@@ -1,4 +1,4 @@
-package com.labrats.android.flip9;
+package com.labrats.android.flip9.activity;
 
 import android.app.Activity;
 import android.os.Bundle;

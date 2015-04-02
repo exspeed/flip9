@@ -1,4 +1,4 @@
-package com.labrats.android.flip9;
+package com.labrats.android.flip9.fragment;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -33,6 +33,12 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import com.labrats.android.flip9.data.Cheat;
+import com.labrats.android.flip9.dialog.CompleteDialog;
+import com.labrats.android.flip9.data.FlipData;
+import com.labrats.android.flip9.R;
+import com.labrats.android.flip9.data.UserData;
+
 public class FlipNineFragment extends Fragment {
 	//Initalize variables
 	public static final String EXTRA_GAME_ID = "game id";
@@ -64,7 +70,6 @@ public class FlipNineFragment extends Fragment {
 		info.putSerializable(EXTRA_GAME_ID, gameId);
 		FlipNineFragment fragment = new FlipNineFragment();
 		fragment.setArguments(info);
-
 		return fragment;
 	}
 
@@ -75,7 +80,7 @@ public class FlipNineFragment extends Fragment {
 		View v = inflater
 				.inflate(R.layout.fragment_flip_nine, container, false);
 
-		mMoveTextView = (TextView) v.findViewById(R.id.moveTextView);
+        mMoveTextView = (TextView) v.findViewById(R.id.moveTextView);
 		mMoveString = mMoveTextView.getText().toString() + " "; // kind of bad??
 		mMoveTextView.setText(mMoveString + "0");
 
@@ -132,7 +137,7 @@ public class FlipNineFragment extends Fragment {
 			public boolean onLongClick(View v) {
 				if (mCheatCount == 2) {
 					ArrayList<Integer> answer = Cheat.getCheat(mFlipData
-							.getCurrentState());
+                            .getCurrentState());
 					for (int num : answer) {
 						mTileButtons[num].setText("*");
 					}

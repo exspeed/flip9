@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.labrats.android.flip9.MainMenuActivity" >
+    tools:context="com.labrats.android.flip9.activity.MainMenuActivity" >
 
     <item
         android:id="@+id/action_settings"

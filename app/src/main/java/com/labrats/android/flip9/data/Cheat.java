@@ -1,4 +1,4 @@
-package com.labrats.android.flip9;
+package com.labrats.android.flip9.data;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -18,6 +18,9 @@ public class Cheat {
 	 * returns the button presses
 	 */
 	public static ArrayList<Integer> getCheat(int c) {
+        if(c < 0 || c >= 512){
+            return null;
+        }
 		Arrays.fill(visited, false);
 		Arrays.fill(parent, -1);
 		Arrays.fill(button, -1);

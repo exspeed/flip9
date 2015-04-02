@@ -1,4 +1,4 @@
-package com.labrats.android.flip9;
+package com.labrats.android.flip9.fragment;
 
 import android.graphics.Rect;
 import android.graphics.drawable.GradientDrawable;
@@ -19,7 +19,11 @@ import android.widget.PopupWindow;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.labrats.android.flip9.data.FlipData;
+import com.labrats.android.flip9.dialog.NightmareDialog;
+import com.labrats.android.flip9.R;
+import com.labrats.android.flip9.data.UserData;
 
 import java.util.Random;
 

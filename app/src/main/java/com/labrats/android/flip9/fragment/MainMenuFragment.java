@@ -1,4 +1,4 @@
-package com.labrats.android.flip9;
+package com.labrats.android.flip9.fragment;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -15,6 +15,11 @@ import android.widget.Button;
 import com.facebook.FacebookSdk;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareButton;
+import com.labrats.android.flip9.dialog.ColorSelectDialog;
+import com.labrats.android.flip9.R;
+import com.labrats.android.flip9.activity.NightmareModeActivity;
+import com.labrats.android.flip9.activity.PuzzleListActivity;
+import com.labrats.android.flip9.activity.TimeTrialActivity;
 
 public class MainMenuFragment extends Fragment {
 	//Initializing variables

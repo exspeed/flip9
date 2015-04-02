@@ -1,9 +1,12 @@
-package com.labrats.android.flip9;
+package com.labrats.android.flip9.activity;
 
 import java.util.UUID;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
+
+import com.labrats.android.flip9.fragment.FlipNineFragment;
+import com.labrats.android.flip9.R;
 
 public class FlipNineActivity extends SingleFragmentActivity {
 

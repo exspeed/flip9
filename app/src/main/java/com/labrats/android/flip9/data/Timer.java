@@ -1,4 +1,4 @@
-package com.labrats.android.flip9;
+package com.labrats.android.flip9.data;
 
 import java.util.concurrent.TimeUnit;
 

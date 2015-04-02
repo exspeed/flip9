@@ -1,4 +1,4 @@
-package com.labrats.android.flip9;
+package com.labrats.android.flip9.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -12,6 +12,9 @@ import android.support.v4.app.DialogFragment;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+
+import com.labrats.android.flip9.R;
+import com.labrats.android.flip9.data.UserData;
 
 public class ColorSelectDialog extends DialogFragment {
 	//Initialize variables
